@@ -10,6 +10,9 @@ public class CameraCollision : MonoBehaviour
     public Vector3 dollyDir;
     public Vector3 dollyDirAdjusted;
     public float distance;
+    public float transparantieDistance = 2f;
+
+    public GameObject character;
 
     // Start is called before the first frame update
     private void Start()
@@ -34,6 +37,15 @@ public class CameraCollision : MonoBehaviour
         {
             distance = maxDistance;
             transform.localPosition = Vector3.Lerp(transform.localPosition, dollyDir * distance, Time.deltaTime * smooth);
+        }
+        if (distance <= transparantieDistance)
+        {
+            //hide de character zodat de speler nog kan zien!
+            character.SetActive(false);
+        }
+        else
+        {
+            character.SetActive(true);
         }
     }
 }
