@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CameraCollision : MonoBehaviour
 {
@@ -38,9 +36,13 @@ public class CameraCollision : MonoBehaviour
             distance = maxDistance;
             transform.localPosition = Vector3.Lerp(transform.localPosition, dollyDir * distance, Time.deltaTime * smooth);
         }
+
+        /*
+         kijk naar de distance van de wanneer de distance te erg word hide ik de speler zodat
+         je niet alleen de achterkant van de speler ziet maar dus door de speler heen kan kijken
+         */
         if (distance <= transparantieDistance)
         {
-            //hide de character zodat de speler nog kan zien!
             character.SetActive(false);
         }
         else

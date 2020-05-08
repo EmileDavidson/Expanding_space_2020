@@ -1,10 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerRotation : MonoBehaviour
 {
-    public bool canmousemove = true;
+    public bool canMouseMove = true;
     private CharacterController controller;
     public float speedY = 1f;
     public float speedX = 1f;
@@ -30,14 +28,14 @@ public class PlayerRotation : MonoBehaviour
 
     public void HorizontalMove()
     {
-        if (canmousemove == false) { return; }
+        if (canMouseMove == false) { return; }
         yaw += speedX * Input.GetAxis("Mouse X");
         transform.eulerAngles = new Vector3(0, yaw, 0);
     }
 
     public void verticalMove()
     {
-        if (canmousemove == false) { return; }
+        if (canMouseMove == false) { return; }
         pitch -= speedY * Input.GetAxis("Mouse Y");
         pitch = Mathf.Clamp(pitch, vertClampMin, vertClampMax);
         camTransform.localEulerAngles = new Vector3(pitch, 0, 0);

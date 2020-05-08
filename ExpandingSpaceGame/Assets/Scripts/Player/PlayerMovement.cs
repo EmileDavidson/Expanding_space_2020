@@ -1,17 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public bool canmove = true;
+    public bool canMove = true;
     public float speed = 6f;
     public float gravity = 20f;
 
     private Vector3 moveDirection = Vector3.zero;
     private CharacterController controller;
 
-    public float jumpspeed = 8f;
+    public float jumpSpeed = 8f;
     public int maxDubbleJumps = 0;
     public int jumps;
 
@@ -29,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void move()
     {
-        if (canmove == false) { return; }
+        if (canMove == false) { return; }
         if (controller.isGrounded)
         {
             moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
@@ -37,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
             moveDirection *= speed;
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                moveDirection.y = jumpspeed;
+                moveDirection.y = jumpSpeed;
             }
             jumps = 0;
         }
@@ -49,7 +47,7 @@ public class PlayerMovement : MonoBehaviour
             moveDirection.z *= speed;
             if (Input.GetKeyDown(KeyCode.Space) && jumps < maxDubbleJumps)
             {
-                moveDirection.y = jumpspeed;
+                moveDirection.y = jumpSpeed;
                 jumps++;
             }
         }
