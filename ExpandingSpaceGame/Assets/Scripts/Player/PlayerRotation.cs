@@ -24,18 +24,18 @@ public class PlayerRotation : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        MouseMovement();
-        verticalmove();
+        HorizontalMove();
+        verticalMove();
     }
 
-    public void MouseMovement()
+    public void HorizontalMove()
     {
         if (canmousemove == false) { return; }
         yaw += speedX * Input.GetAxis("Mouse X");
         transform.eulerAngles = new Vector3(0, yaw, 0);
     }
 
-    public void verticalmove()
+    public void verticalMove()
     {
         if (canmousemove == false) { return; }
         pitch -= speedY * Input.GetAxis("Mouse Y");
