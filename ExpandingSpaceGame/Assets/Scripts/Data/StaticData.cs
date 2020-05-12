@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using System.Collections.Generic;
 
 public class StaticData
 {
@@ -9,7 +7,7 @@ public class StaticData
      dit zodat we dit niet kwijtraken wanneer je van scene switched
      */
     public static bool setupGeweest = false;
-    public static int scrapPiecesAmount = 0;
+    public static int scrapPiecesAmount = 5;
     public static Dictionary<int, bool> scrapPieces = new Dictionary<int, bool>();
 
     public static void setup()
@@ -20,8 +18,6 @@ public class StaticData
             {
                 scrapPieces.Add(i, false);
             }
-
-            Debug.Log(scrapPieces);
             setupGeweest = true;
         }
     }

@@ -65,8 +65,15 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Data\LoadData.cs" />
     <Compile Include="Assets\Scripts\Data\StaticData.cs" />
+    <Compile Include="Assets\Scripts\ObjectScripts\LaunchPad.cs" />
+    <Compile Include="Assets\Scripts\ObjectScripts\MovingPlatform.cs" />
+    <Compile Include="Assets\Scripts\ObjectScripts\PressurePlateScripts\PressurePlate.cs" />
+    <Compile Include="Assets\Scripts\ObjectScripts\PressurePlateScripts\PressurePlateDoor.cs" />
+    <Compile Include="Assets\Scripts\ObjectScripts\PushableBlocks\AllowPushChecker.cs" />
+    <Compile Include="Assets\Scripts\ObjectScripts\PushableBlocks\PushBlock.cs" />
+    <Compile Include="Assets\Scripts\ObjectScripts\PushableBlocks\ResetBlocks.cs" />
     <Compile Include="Assets\Scripts\Player\CameraCollision.cs" />
-    <Compile Include="Assets\Scripts\Player\PlayerDuster.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerFollow.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerRotation.cs" />
     <Compile Include="Assets\Scripts\ScrapPiece.cs" />

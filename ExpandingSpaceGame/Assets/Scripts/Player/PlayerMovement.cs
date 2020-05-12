@@ -6,8 +6,8 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 6f;
     public float gravity = 20f;
 
-    private Vector3 moveDirection = Vector3.zero;
-    private CharacterController controller;
+    public Vector3 moveDirection = Vector3.zero;
+    public CharacterController controller;
 
     public float jumpSpeed = 8f;
     public int maxDubbleJumps = 0;
@@ -51,6 +51,7 @@ public class PlayerMovement : MonoBehaviour
                 jumps++;
             }
         }
+
         moveDirection.y -= gravity * Time.deltaTime;
         controller.Move(moveDirection * Time.deltaTime);
     }
