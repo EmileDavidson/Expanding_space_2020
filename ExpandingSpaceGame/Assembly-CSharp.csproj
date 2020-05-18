@@ -65,7 +65,8 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Data\LoadData.cs" />
     <Compile Include="Assets\Scripts\Data\StaticData.cs" />
-    <Compile Include="Assets\Scripts\LoadingBar.cs" />
+    <Compile Include="Assets\Scripts\LevelReset.cs" />
+    <Compile Include="Assets\Scripts\NextLevel.cs" />
     <Compile Include="Assets\Scripts\ObjectScripts\LaunchPad.cs" />
     <Compile Include="Assets\Scripts\ObjectScripts\MovingPlatform.cs" />
     <Compile Include="Assets\Scripts\ObjectScripts\PressurePlateScripts\PressurePlate.cs" />
@@ -74,10 +75,12 @@
     <Compile Include="Assets\Scripts\ObjectScripts\PushableBlocks\PushBlock.cs" />
     <Compile Include="Assets\Scripts\ObjectScripts\PushableBlocks\ResetBlocks.cs" />
     <Compile Include="Assets\Scripts\Player\CameraCollision.cs" />
+    <Compile Include="Assets\Scripts\Player\PauzeGame.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerFollow.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerRotation.cs" />
     <Compile Include="Assets\Scripts\ScrapPiece.cs" />
+    <Compile Include="Assets\Scripts\UI\LoadingBar.cs" />
     <Compile Include="Assets\Scripts\UI\UI.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/unity/Projects/Expanding_space_2020/Expanding_space_2020/ExpandingSpaceGame/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

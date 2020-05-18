@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public CharacterController controller;
 
     public float jumpSpeed = 8f;
-    public int maxDubbleJumps = 0;
+    public int maxDoubleJumps = 0;
     public int jumps;
 
     // Start is called before the first frame update
@@ -45,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
             moveDirection = transform.TransformDirection(moveDirection);
             moveDirection.x *= speed;
             moveDirection.z *= speed;
-            if (Input.GetKeyDown(KeyCode.Space) && jumps < maxDubbleJumps)
+            if (Input.GetKeyDown(KeyCode.Space) && jumps < maxDoubleJumps)
             {
                 moveDirection.y = jumpSpeed;
                 jumps++;
