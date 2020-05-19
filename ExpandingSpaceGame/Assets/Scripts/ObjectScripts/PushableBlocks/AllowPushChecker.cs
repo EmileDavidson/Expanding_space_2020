@@ -8,7 +8,9 @@ public class AllowPushChecker : MonoBehaviour
     //dan zet hij canmove naar false
     private void OnTriggerEnter(Collider other)
     {
-        if (!other.gameObject.tag.Equals("Player"))
+        print(other.gameObject.name);
+        print(other.gameObject.tag);
+        if (!other.gameObject.tag.Equals("Player") && !other.gameObject.tag.Equals("PressurePlate"))
         {
             canMove = false;
         }
@@ -16,7 +18,9 @@ public class AllowPushChecker : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (!other.gameObject.tag.Equals("Player"))
+        print(other.gameObject.name);
+        print(other.gameObject.tag);
+        if (!other.gameObject.tag.Equals("Player") || !other.gameObject.tag.Equals("PressurePlate"))
         {
             canMove = true;
         }
@@ -24,7 +28,7 @@ public class AllowPushChecker : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (!other.gameObject.tag.Equals("Player"))
+        if (!other.gameObject.tag.Equals("Player") && !other.gameObject.tag.Equals("PressurePlate"))
         {
             canMove = false;
         }
