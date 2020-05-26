@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void move()
     {
-        if (canMove == false) { return; }
+        if (canMove == false) return;
         if (controller.isGrounded)
         {
             moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));

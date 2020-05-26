@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PressurePlate
   - PushableBlock
+  - DraggableObject
   layers:
   - Default
   - TransparentFX

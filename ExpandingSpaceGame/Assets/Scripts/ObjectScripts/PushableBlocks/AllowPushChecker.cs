@@ -8,8 +8,6 @@ public class AllowPushChecker : MonoBehaviour
     //dan zet hij canmove naar false
     private void OnTriggerEnter(Collider other)
     {
-        print(other.gameObject.name);
-        print(other.gameObject.tag);
         if (!other.gameObject.tag.Equals("Player") && !other.gameObject.tag.Equals("PressurePlate"))
         {
             canMove = false;
