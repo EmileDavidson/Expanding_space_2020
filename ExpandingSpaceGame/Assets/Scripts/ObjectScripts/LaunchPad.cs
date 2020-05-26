@@ -2,7 +2,6 @@
 
 public class LaunchPad : MonoBehaviour
 {
-    
     [Range(1, 100)]
     public float jumpPower = 10f;
 

@@ -615,6 +615,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PressurePlate
       objectReference: {fileID: 0}
+    - target: {fileID: 1729615549825899042, guid: 7503a06c620d88e40b931001eb22692d,
+        type: 3}
+      propertyPath: m_TagString
+      value: PressurePlate
+      objectReference: {fileID: 0}
+    - target: {fileID: 1729615549825899097, guid: 7503a06c620d88e40b931001eb22692d,
+        type: 3}
+      propertyPath: time
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1729615549825899101, guid: 7503a06c620d88e40b931001eb22692d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1035,6 +1045,11 @@ PrefabInstance:
       propertyPath: speed
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 6836626444575812787, guid: 3e4d453829480364b82c273be2af98a9,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 914125387}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e4d453829480364b82c273be2af98a9, type: 3}
 --- !u!1 &771577643
@@ -2103,9 +2118,19 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8484460128908381717, guid: 3e6c90eac4397584681205774b103e52,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8484460128908381720, guid: 3e6c90eac4397584681205774b103e52,
         type: 3}
       propertyPath: m_Name
+      value: PushableBlock
+      objectReference: {fileID: 0}
+    - target: {fileID: 8484460128908381720, guid: 3e6c90eac4397584681205774b103e52,
+        type: 3}
+      propertyPath: m_TagString
       value: PushableBlock
       objectReference: {fileID: 0}
     - target: {fileID: 8484460128908381721, guid: 3e6c90eac4397584681205774b103e52,
@@ -2825,7 +2850,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1907481195}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1

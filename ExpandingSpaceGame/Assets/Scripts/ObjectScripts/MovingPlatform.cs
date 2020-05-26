@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class MovingPlatform : MonoBehaviour
 {
@@ -7,22 +8,32 @@ public class MovingPlatform : MonoBehaviour
     public bool yAs = false;
     public bool zAs = false;
 
+    public Vector3 newPosition = Vector3.zero;
+
+    public bool playerIsInCollision = false;
+    public GameObject player;
+
     private void Update()
     {
         if (xAs)
         {
-            this.transform.position += new Vector3(speed, 0, 0) * Time.deltaTime;
+            newPosition += new Vector3(speed, 0, 0);
         }
 
         if (yAs)
         {
-            this.transform.position += new Vector3(0, speed, 0) * Time.deltaTime;
+            newPosition += new Vector3(0, speed, 0);
         }
 
         if (zAs)
         {
-            this.transform.position += new Vector3(0, 0, speed) * Time.deltaTime;
+            newPosition += new Vector3(0, 0, speed);
         }
+
+        this.transform.position += newPosition * Time.deltaTime;
+
+        //reset newPosition zodat hij niet elke keer sneller gaat maar een vaste snelheid behoud.
+        newPosition = Vector3.zero;
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -32,6 +43,11 @@ public class MovingPlatform : MonoBehaviour
         if (!collision.gameObject.tag.Equals("Player"))
         {
             this.speed = -speed;
+        }
+        else
+        {
+            //player is in collision
+            playerIsInCollision = true;
         }
     }
 }

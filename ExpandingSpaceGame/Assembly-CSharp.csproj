@@ -65,6 +65,12 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Data\LoadData.cs" />
     <Compile Include="Assets\Scripts\Data\StaticData.cs" />
+<<<<<<< HEAD
+=======
+    <Compile Include="Assets\Scripts\LevelReset.cs" />
+    <Compile Include="Assets\Scripts\NextLevel.cs" />
+    <Compile Include="Assets\Scripts\ObjectScripts\DraggableObject.cs" />
+>>>>>>> bd10c3852d93b381b4d3f67c981bdcd32c1eb30f
     <Compile Include="Assets\Scripts\ObjectScripts\LaunchPad.cs" />
     <Compile Include="Assets\Scripts\ObjectScripts\MovingPlatform.cs" />
     <Compile Include="Assets\Scripts\ObjectScripts\PlatformAttach.cs" />
@@ -75,11 +81,19 @@
     <Compile Include="Assets\Scripts\ObjectScripts\PushableBlocks\ResetBlocks.cs" />
     <Compile Include="Assets\Scripts\ObjectScripts\Puzzle\GravityObjecten.cs" />
     <Compile Include="Assets\Scripts\ObjectScripts\Puzzle\RotationScript.cs" />
+<<<<<<< HEAD
     <Compile Include="Assets\Scripts\ObjectScripts\Settings.cs" />
+=======
+    <Compile Include="Assets\Scripts\PauzeGame.cs" />
+>>>>>>> bd10c3852d93b381b4d3f67c981bdcd32c1eb30f
     <Compile Include="Assets\Scripts\Player\CameraCollision.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerFollow.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerRotation.cs" />
+    <Compile Include="Assets\Scripts\Player\Weapons\Weapon.cs" />
+    <Compile Include="Assets\Scripts\Player\Weapons\WeaponCollider.cs" />
+    <Compile Include="Assets\Scripts\Player\Weapons\WeaponHandler.cs" />
+    <Compile Include="Assets\Scripts\Player\Weapons\zucc2000.cs" />
     <Compile Include="Assets\Scripts\ScrapPiece.cs" />
     <Compile Include="Assets\Scripts\UI\LevelReset.cs" />
     <Compile Include="Assets\Scripts\UI\LoadingBar.cs" />
