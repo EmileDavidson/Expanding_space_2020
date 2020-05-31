@@ -35,7 +35,7 @@ public class CameraCollision : MonoBehaviour
             //de camera niet aantepassen want hij gaat niet door een "object die je kan zien" heen
             if (hit.transform.gameObject.GetComponent<MeshRenderer>())
             {
-                distance = Mathf.Clamp(hit.distance * 0.9f, minDistance, maxDistance);
+                distance = Mathf.Clamp(hit.distance * 0.8f, minDistance, maxDistance);
                 {
                     transform.localPosition = Vector3.Lerp(transform.localPosition, dollyDir * distance, Time.deltaTime * smooth);
                 }

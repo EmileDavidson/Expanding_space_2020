@@ -29,14 +29,14 @@ public class WeaponHandler : MonoBehaviour
         if (Input.GetKey(KeyCode.Mouse0))
         {
             //zorg dat je schiet of je weapon gebruikt met hoe het moet
-            if (activeWeapon == null) return; // zorg dat wanneer het null is het niet door gaat dit kan mogelijke errors voorkomen
+            if (activeWeapon == null) return;
             activeWeapon.triggerHold();
         }
 
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             //zorg dat je schiet of je weapon gebruikt met hoe het moet
-            if (activeWeapon == null) return; // zorg dat wanneer het null is het niet door gaat dit kan mogelijke errors voorkomen
+            if (activeWeapon == null) return;
             activeWeapon.triggerDown();
         }
 

@@ -4,12 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class LoadingBar : UI
+public class LoadingBar : MonoBehaviour
 {
     public GameObject loadingScreen;
     public Slider slider;
 
-    public void loadLevel()
+    public void loadLevel(int sceneIndex)
     {
         StartCoroutine(loadAsync(sceneIndex));
     }

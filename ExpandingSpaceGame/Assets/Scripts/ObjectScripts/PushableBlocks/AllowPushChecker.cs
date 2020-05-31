@@ -16,8 +16,6 @@ public class AllowPushChecker : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        print(other.gameObject.name);
-        print(other.gameObject.tag);
         if (!other.gameObject.tag.Equals("Player") || !other.gameObject.tag.Equals("PressurePlate"))
         {
             canMove = true;

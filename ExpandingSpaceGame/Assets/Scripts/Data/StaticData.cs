@@ -9,7 +9,7 @@ public class StaticData
     public static bool setupGeweest = false;
     public static int scrapPiecesAmount = 5;
     public static Dictionary<int, bool> scrapPieces = new Dictionary<int, bool>();
-
+    public static int playerCoinsPickups = 0;
     public static void setup()
     {
         if (setupGeweest == false)
