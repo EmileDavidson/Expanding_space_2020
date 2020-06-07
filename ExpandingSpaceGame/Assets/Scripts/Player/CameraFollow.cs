@@ -53,6 +53,8 @@ public class CameraFollow : MonoBehaviour
 
         Quaternion localRotation = Quaternion.Euler(rotX, rotY, 0);
         transform.rotation = localRotation;
+
+        //gameObject.transform.eulerAngles = new Vector3(cameraObject.transform.eulerAngles.x, rotY, cameraObject.transform.eulerAngles.x);
     }
 
     private void LateUpdate()

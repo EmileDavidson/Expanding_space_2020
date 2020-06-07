@@ -54,15 +54,5 @@ public class CameraCollision : MonoBehaviour
             transform.localPosition = Vector3.Lerp(transform.localPosition, dollyDir * distance, Time.deltaTime * smooth);
         }
 
-        //kijk naar de distance van de wanneer de distance te erg word hide ik de speler zodat
-        //je niet alleen de achterkant van de speler ziet maar dus door de speler heen kan kijken
-        if (distance <= transparantieDistance)
-        {
-            character.SetActive(false);
-        }
-        else
-        {
-            character.SetActive(true);
-        }
     }
 }

@@ -9,14 +9,14 @@ public class PressurePlate : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!other.gameObject.tag.Equals("Player") && !other.gameObject.tag.Equals("PushableBlock")) return;
+        if (!other.gameObject.tag.Equals("Player") && !other.gameObject.tag.Equals("PushableBlock") && !other.gameObject.tag.Equals("bullet")) return;
         if (isPressed) return;
         isPressed = true;
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (!other.gameObject.tag.Equals("Player") && !other.gameObject.tag.Equals("PushableBlock")) return;
+        if (!other.gameObject.tag.Equals("Player") && !other.gameObject.tag.Equals("PushableBlock") && !other.gameObject.tag.Equals("bullet")) return;
         StartCoroutine(Timer());
     }
 

@@ -3,60 +3,53 @@ using UnityEngine;
 
 public class zucc2000 : Weapon
 {
-    public GameObject weaponCollider;
-    public GameObject smallerWeaponCollider;
-    public List<GameObject> ammoObjecten;
     public int offset = 3;
+    public float shootingPower = 1;
+    public int minPower = 1;
+    public int maxPower = 10;
+    public float powerMultiplier = 1;
+    public GameObject bullet;
 
     public void Start()
     {
-        cooldownTime = 3;
+        cooldownTime = 10;
     }
 
     public override void shoot()
     {
-        if (ammoObjecten.Count <= 0) return;
+        //shoot logic
         canShoot = false;
+        GameObject bulletobj = Instantiate(bullet);
+        bulletobj.transform.position = this.transform.position + this.transform.forward * offset;
+        bulletobj.transform.rotation = this.transform.rotation;
+        bulletobj.GetComponent<Rigidbody>().AddForce(this.transform.forward * 1000 * shootingPower);
 
-        //schoot logic
-
-        //pak een random nummer voor het object dat je gaat schieten
-        int random = Random.Range(0, ammoObjecten.Count);
-
-        ammoObjecten[random].SetActive(true);
-        ammoObjecten[random].transform.position = this.transform.position + this.transform.forward * offset;
-        ammoObjecten[random].GetComponent<Rigidbody>().AddForce(this.transform.forward * 5000);
-
-        ammoObjecten.Remove(ammoObjecten[random]);
+        shootingPower = 1;
     }
 
     public override void rightMouseDown()
     {
-        //kijk of er objecten in de buurt zitten en zuig die op
-        for (int i = 0; i < weaponCollider.GetComponent<WeaponCollider>().list.Count; i++)
-        {
-            print(weaponCollider.GetComponent<WeaponCollider>().list[i]);
-            if (weaponCollider.GetComponent<WeaponCollider>().list[i].gameObject.tag.Equals("DraggableObject"))
-            {
-                //het object is op te pakken
-                weaponCollider.GetComponent<WeaponCollider>().list[i].gameObject.GetComponent<DraggableObject>().follow = true;
-            }
-        }
-        for (int i = 0; i < smallerWeaponCollider.GetComponent<WeaponCollider>().list.Count; i++)
-        {
-            if (smallerWeaponCollider.GetComponent<WeaponCollider>().list[i].gameObject.tag.Equals("DraggableObject"))
-            {
-                //error fix
-                if (weaponCollider.GetComponent<WeaponCollider>().list.Contains(smallerWeaponCollider.GetComponent<WeaponCollider>().list[i]))
-                {
-                    weaponCollider.GetComponent<WeaponCollider>().list.Remove(smallerWeaponCollider.GetComponent<WeaponCollider>().list[i]);
-                }
+        //aim
+    }
 
-                //hij is dicht bij genoeg om te weg te halen
-                ammoObjecten.Add(smallerWeaponCollider.GetComponent<WeaponCollider>().list[i]);
-                smallerWeaponCollider.GetComponent<WeaponCollider>().list[i].SetActive(false);
-                smallerWeaponCollider.GetComponent<WeaponCollider>().list.Remove(smallerWeaponCollider.GetComponent<WeaponCollider>().list[i]);
-            }
+    public override void triggerHold()
+    {
+        //verhoog de shooting power.
+        shootingPower += (powerMultiplier * Time.deltaTime);
+        if (shootingPower > maxPower || shootingPower < minPower)
+        {
+            powerMultiplier = -powerMultiplier;
         }
+    }
+
+    public override void mouseUp()
+    {
+        //shoot
+        if (canShoot == false)
+        {
+            shootingPower = 1;
+            return;
+        }
+        shoot();
     }
 }

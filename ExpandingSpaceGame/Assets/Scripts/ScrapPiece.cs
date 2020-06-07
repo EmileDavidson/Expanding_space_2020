@@ -24,4 +24,20 @@ public class ScrapPiece : MonoBehaviour
         }
         Destroy(this.gameObject);
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag.Equals("Player"))
+        {
+            pickup();
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag.Equals("Player"))
+        {
+            pickup();
+        }
+    }
 }
