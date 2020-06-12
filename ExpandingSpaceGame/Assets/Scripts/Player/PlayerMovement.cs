@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
 
     public Camera playerCam;
     public Animator anim;
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -32,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        checkForLanding();
+        //checkForLanding();
         rotate();
         move();
         animate();
@@ -46,7 +47,7 @@ public class PlayerMovement : MonoBehaviour
             moveDirection = new Vector3(Input.GetAxis("Horizontal") / 2, 0, Input.GetAxis("Vertical"));
             moveDirection = transform.TransformDirection(moveDirection);
             moveDirection *= speed;
-            if (Input.GetKey(KeyCode.Space) )
+            if (Input.GetKey(KeyCode.Space))
             {
                 moveDirection.y = jumpSpeed;
             }
@@ -71,6 +72,8 @@ public class PlayerMovement : MonoBehaviour
     public void rotate()
     {
         transform.eulerAngles = new Vector3(0, playerCam.transform.rotation.eulerAngles.y, 0);
+        //Vector3 Rot = new Vector3(this.transform.eulerAngles.x, playerCam.transform.eulerAngles.y, this.transform.eulerAngles.z);
+        //this.transform.eulerAngles = Rot;
     }
 
     public void checkForLanding()
@@ -96,6 +99,7 @@ public class PlayerMovement : MonoBehaviour
 
         //standaard uitvoeren:
     }
+
     public void animate()
     {
         if (moveDirection.x != 0 || moveDirection.z != 0)
@@ -107,5 +111,4 @@ public class PlayerMovement : MonoBehaviour
             anim.SetBool("Walking", false);
         }
     }
-
 }
