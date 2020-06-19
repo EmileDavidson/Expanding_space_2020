@@ -79,6 +79,9 @@
     <Compile Include="Assets\Scripts\ObjectScripts\Puzzle\GravityObjecten.cs" />
     <Compile Include="Assets\Scripts\ObjectScripts\Puzzle\RotationScript.cs" />
     <Compile Include="Assets\Scripts\ObjectScripts\Settings.cs" />
+    <Compile Include="Assets\Scripts\ObjectScripts\bomb\Bomb.cs" />
+    <Compile Include="Assets\Scripts\ObjectScripts\bomb\BombHandler.cs" />
+    <Compile Include="Assets\Scripts\ObjectScripts\bomb\BombPickup.cs" />
     <Compile Include="Assets\Scripts\Pickup.cs" />
     <Compile Include="Assets\Scripts\Player\CameraCollision.cs" />
     <Compile Include="Assets\Scripts\Player\CameraFollow.cs" />
@@ -97,64 +100,64 @@
     <Compile Include="Assets\Scripts\UI\PauzeGame.cs" />
     <Compile Include="Assets\Scripts\UI\UI.cs" />
     <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
-      <HintPath>D:/Projecten/Reposetories/ExpandingSpace_2020/Expanding_space_2020/ExpandingSpaceGame/Library/ScriptAssemblies/Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
+      <HintPath>D:/Projecten/Repositories/ExpandingSpace_2020/ExpandingSpace-2020/Expanding_space_2020/ExpandingSpaceGame/Library/ScriptAssemblies/Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>D:/Projecten/Reposetories/ExpandingSpace_2020/Expanding_space_2020/ExpandingSpaceGame/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>D:/Projecten/Repositories/ExpandingSpace_2020/ExpandingSpace-2020/Expanding_space_2020/ExpandingSpaceGame/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Shaders">
-      <HintPath>D:/Projecten/Reposetories/ExpandingSpace_2020/Expanding_space_2020/ExpandingSpaceGame/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
+      <HintPath>D:/Projecten/Repositories/ExpandingSpace_2020/ExpandingSpace-2020/Expanding_space_2020/ExpandingSpaceGame/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>D:/Projecten/Reposetories/ExpandingSpace_2020/Expanding_space_2020/ExpandingSpaceGame/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>D:/Projecten/Repositories/ExpandingSpace_2020/ExpandingSpace-2020/Expanding_space_2020/ExpandingSpaceGame/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.Editor">
-      <HintPath>D:/Projecten/Reposetories/ExpandingSpace_2020/Expanding_space_2020/ExpandingSpaceGame/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
+      <HintPath>D:/Projecten/Repositories/ExpandingSpace_2020/ExpandingSpace-2020/Expanding_space_2020/ExpandingSpaceGame/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.Runtime">
-      <HintPath>D:/Projecten/Reposetories/ExpandingSpace_2020/Expanding_space_2020/ExpandingSpaceGame/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+      <HintPath>D:/Projecten/Repositories/ExpandingSpace_2020/ExpandingSpace-2020/Expanding_space_2020/ExpandingSpaceGame/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualEffectGraph.Runtime">
-      <HintPath>D:/Projecten/Reposetories/ExpandingSpace_2020/Expanding_space_2020/ExpandingSpaceGame/Library/ScriptAssemblies/Unity.VisualEffectGraph.Runtime.dll</HintPath>
+      <HintPath>D:/Projecten/Repositories/ExpandingSpace_2020/ExpandingSpace-2020/Expanding_space_2020/ExpandingSpaceGame/Library/ScriptAssemblies/Unity.VisualEffectGraph.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>D:/Projecten/Reposetories/ExpandingSpace_2020/Expanding_space_2020/ExpandingSpaceGame/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>D:/Projecten/Repositories/ExpandingSpace_2020/ExpandingSpace-2020/Expanding_space_2020/ExpandingSpaceGame/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Runtime">
-      <HintPath>D:/Projecten/Reposetories/ExpandingSpace_2020/Expanding_space_2020/ExpandingSpaceGame/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+      <HintPath>D:/Projecten/Repositories/ExpandingSpace_2020/ExpandingSpace-2020/Expanding_space_2020/ExpandingSpaceGame/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Editor">
-      <HintPath>D:/Projecten/Reposetories/ExpandingSpace_2020/Expanding_space_2020/ExpandingSpaceGame/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.dll</HintPath>
+      <HintPath>D:/Projecten/Repositories/ExpandingSpace_2020/ExpandingSpace-2020/Expanding_space_2020/ExpandingSpaceGame/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>D:/Projecten/Reposetories/ExpandingSpace_2020/Expanding_space_2020/ExpandingSpaceGame/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>D:/Projecten/Repositories/ExpandingSpace_2020/ExpandingSpace-2020/Expanding_space_2020/ExpandingSpaceGame/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>D:/Projecten/Reposetories/ExpandingSpace_2020/Expanding_space_2020/ExpandingSpaceGame/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>D:/Projecten/Repositories/ExpandingSpace_2020/ExpandingSpace-2020/Expanding_space_2020/ExpandingSpaceGame/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>D:/Projecten/Reposetories/ExpandingSpace_2020/Expanding_space_2020/ExpandingSpaceGame/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>D:/Projecten/Repositories/ExpandingSpace_2020/ExpandingSpace-2020/Expanding_space_2020/ExpandingSpaceGame/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>D:/Projecten/Reposetories/ExpandingSpace_2020/Expanding_space_2020/ExpandingSpaceGame/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>D:/Projecten/Repositories/ExpandingSpace_2020/ExpandingSpace-2020/Expanding_space_2020/ExpandingSpaceGame/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
-      <HintPath>D:/Projecten/Reposetories/ExpandingSpace_2020/Expanding_space_2020/ExpandingSpaceGame/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+      <HintPath>D:/Projecten/Repositories/ExpandingSpace_2020/ExpandingSpace-2020/Expanding_space_2020/ExpandingSpaceGame/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualEffectGraph.Editor">
-      <HintPath>D:/Projecten/Reposetories/ExpandingSpace_2020/Expanding_space_2020/ExpandingSpaceGame/Library/ScriptAssemblies/Unity.VisualEffectGraph.Editor.dll</HintPath>
+      <HintPath>D:/Projecten/Repositories/ExpandingSpace_2020/ExpandingSpace-2020/Expanding_space_2020/ExpandingSpaceGame/Library/ScriptAssemblies/Unity.VisualEffectGraph.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ShaderGraph.Editor">
-      <HintPath>D:/Projecten/Reposetories/ExpandingSpace_2020/Expanding_space_2020/ExpandingSpaceGame/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
+      <HintPath>D:/Projecten/Repositories/ExpandingSpace_2020/ExpandingSpace-2020/Expanding_space_2020/ExpandingSpaceGame/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
-      <HintPath>D:/Projecten/Reposetories/ExpandingSpace_2020/Expanding_space_2020/ExpandingSpaceGame/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
+      <HintPath>D:/Projecten/Repositories/ExpandingSpace_2020/ExpandingSpace-2020/Expanding_space_2020/ExpandingSpaceGame/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>D:/Projecten/Reposetories/ExpandingSpace_2020/Expanding_space_2020/ExpandingSpaceGame/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>D:/Projecten/Repositories/ExpandingSpace_2020/ExpandingSpace-2020/Expanding_space_2020/ExpandingSpaceGame/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>D:/Projecten/Reposetories/ExpandingSpace_2020/Expanding_space_2020/ExpandingSpaceGame/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>D:/Projecten/Repositories/ExpandingSpace_2020/ExpandingSpace-2020/Expanding_space_2020/ExpandingSpaceGame/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.6f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

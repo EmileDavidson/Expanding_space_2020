@@ -7,6 +7,7 @@ TagManager:
   - PressurePlate
   - PushableBlock
   - DraggableObject
+  - DestoyableWithBomb
   layers:
   - Default
   - TransparentFX

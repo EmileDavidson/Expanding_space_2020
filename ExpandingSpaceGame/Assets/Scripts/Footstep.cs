@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Footstep : MonoBehaviour
 {
-
     public AudioClip[] clips;
     public AudioSource audioSource;
+
     // Start is called before the first frame update
     public void Awake()
     {
@@ -19,6 +19,7 @@ public class Footstep : MonoBehaviour
         AudioClip clip = GetRandomClip();
         audioSource.PlayOneShot(clip);
     }
+
     public AudioClip GetRandomClip()
     {
         return clips[UnityEngine.Random.Range(0, clips.Length)];
