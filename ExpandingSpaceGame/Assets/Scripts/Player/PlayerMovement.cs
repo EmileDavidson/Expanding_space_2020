@@ -50,6 +50,8 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetKey(KeyCode.Space))
             {
                 moveDirection.y = jumpSpeed;
+
+                anim.SetTrigger("IsJumping");
             }
             jumps = 0;
         }
@@ -109,6 +111,14 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             anim.SetBool("Walking", false);
+        }
+        if (Input.GetKey(KeyCode.Space))
+        {
+            anim.SetBool("IsJumping", true);
+        }
+        else
+        {
+            anim.SetBool("IsJumping", false);
         }
     }
 }

@@ -38,10 +38,12 @@ public class Settings : MonoBehaviour
     {
         Resolution resolution = resolutions[resolutionIndex];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+        Debug.Log(resolution);
     }
     public void SetVolume(float volume)
     {
         audioMixer.SetFloat("volume", volume);
+        Debug.Log(volume);
     }
 
     public void SetQuality (int qualityIndex)
@@ -53,6 +55,7 @@ public class Settings : MonoBehaviour
     public void SetFullscreen(bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;
+        Debug.Log(isFullscreen);
     }
 
     // Update is called once per frame

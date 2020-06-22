@@ -29,8 +29,6 @@ public class CameraFollow : MonoBehaviour
         Vector3 rotation = transform.localRotation.eulerAngles;
         rotY = rotation.y;
         rotX = rotation.x;
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
     }
 
     // Update is called once per frame

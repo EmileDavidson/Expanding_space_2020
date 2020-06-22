@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class LevelReset : MonoBehaviour
 {
     // Start is called before the first frame update
-    void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
