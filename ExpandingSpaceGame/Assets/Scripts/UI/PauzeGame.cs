@@ -5,9 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class PauzeGame : MonoBehaviour
 {
-    public bool gameIsPaused;
+    public bool gameIsPaused = false;
     public GameObject gameObject;
     public GameObject PauseScreen;
+
+    private void Start()
+    {
+        PauseGame();
+    }
 
     private void Update()
     {
@@ -15,8 +20,6 @@ public class PauzeGame : MonoBehaviour
         {
             gameIsPaused = !gameIsPaused;
             PauseGame();
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
         }
     }
 
@@ -26,15 +29,21 @@ public class PauzeGame : MonoBehaviour
         {
             Time.timeScale = 0f;
             PauseScreen.SetActive(true);
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+            Debug.Log(gameIsPaused);
+            Debug.Log(Cursor.visible);
+            Debug.Log(Cursor.lockState);
         }
         else
         {
             Time.timeScale = 1f;
-           PauseScreen.SetActive(false);
+            PauseScreen.SetActive(false);
+            Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = true;
+            Debug.Log(gameIsPaused);
+            Debug.Log(Cursor.visible);
+            Debug.Log(Cursor.lockState);
         }
     }
 }

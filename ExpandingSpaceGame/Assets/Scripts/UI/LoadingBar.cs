@@ -8,6 +8,7 @@ public class LoadingBar : MonoBehaviour
 {
     public GameObject loadingScreen;
     public Slider slider;
+    public int sceneIndex;
 
     public void loadLevel(int sceneIndex)
     {
