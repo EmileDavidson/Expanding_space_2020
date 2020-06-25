@@ -8,6 +8,7 @@ public class PauzeGame : MonoBehaviour
     public bool gameIsPaused = false;
     public GameObject gameObject;
     public GameObject PauseScreen;
+    public GameObject[] allScreens;
 
     private void Start()
     {
@@ -41,6 +42,10 @@ public class PauzeGame : MonoBehaviour
             PauseScreen.SetActive(false);
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
+            for (int i = 0; i < allScreens.Length; i++)
+            {
+                allScreens[i].SetActive(false);
+            }
             Debug.Log(gameIsPaused);
             Debug.Log(Cursor.visible);
             Debug.Log(Cursor.lockState);
