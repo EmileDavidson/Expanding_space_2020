@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - AllowPushChecker
     - Bomb
     - BombHandler
     - BombPickup
@@ -18,8 +19,11 @@ ScriptsOnlyBuild:
     - PlayerMovement
     - PressurePlate
     - PressurePlateDoor
+    - PushBlock
+    - ResetBlocks
     - ScrapPiece
     - Settings
+    - Teleporter
     - UI
     Unity.Polybrush.dll:
     - UnityEngine.Polybrush.PolybrushMesh
@@ -150,6 +154,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12246}
     - Class: 114
+      Script: {instanceID: 12336}
+    - Class: 114
       Script: {instanceID: 12528}
     - Class: 114
       Script: {instanceID: 12550}
@@ -176,37 +182,45 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 14330}
     - Class: 114
+      Script: {instanceID: 14434}
+    - Class: 114
       Script: {instanceID: 14448}
     - Class: 114
       Script: {instanceID: 14814}
     - Class: 114
-      Script: {instanceID: 14974}
+      Script: {instanceID: 14840}
     - Class: 114
-      Script: {instanceID: 15194}
+      Script: {instanceID: 14956}
     - Class: 114
-      Script: {instanceID: 15418}
+      Script: {instanceID: 14976}
     - Class: 114
-      Script: {instanceID: 15454}
+      Script: {instanceID: 15196}
     - Class: 114
-      Script: {instanceID: 15474}
+      Script: {instanceID: 15420}
     - Class: 114
-      Script: {instanceID: 15616}
+      Script: {instanceID: 15456}
     - Class: 114
-      Script: {instanceID: 15868}
+      Script: {instanceID: 15476}
     - Class: 114
-      Script: {instanceID: 15902}
+      Script: {instanceID: 15618}
     - Class: 114
-      Script: {instanceID: 15924}
+      Script: {instanceID: 15870}
     - Class: 114
-      Script: {instanceID: 15970}
+      Script: {instanceID: 15904}
     - Class: 114
-      Script: {instanceID: 15996}
+      Script: {instanceID: 15926}
     - Class: 114
-      Script: {instanceID: 16048}
+      Script: {instanceID: 15972}
     - Class: 114
-      Script: {instanceID: 16100}
+      Script: {instanceID: 15998}
     - Class: 114
-      Script: {instanceID: 16118}
+      Script: {instanceID: 16050}
+    - Class: 114
+      Script: {instanceID: 16102}
+    - Class: 114
+      Script: {instanceID: 16120}
+    - Class: 114
+      Script: {instanceID: 24840}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -254,13 +268,98 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
-    - Class: 49
-      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 82
       Script: {instanceID: 0}
     - Class: 83
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 11366}
+    - Class: 114
+      Script: {instanceID: 11816}
+    - Class: 114
+      Script: {instanceID: 11820}
+    - Class: 114
+      Script: {instanceID: 11912}
+    - Class: 114
+      Script: {instanceID: 12246}
+    - Class: 114
+      Script: {instanceID: 12456}
+    - Class: 114
+      Script: {instanceID: 12550}
+    - Class: 114
+      Script: {instanceID: 12602}
+    - Class: 114
+      Script: {instanceID: 12856}
+    - Class: 114
+      Script: {instanceID: 13372}
+    - Class: 114
+      Script: {instanceID: 13834}
+    - Class: 114
+      Script: {instanceID: 13852}
+    - Class: 114
+      Script: {instanceID: 14048}
+    - Class: 114
+      Script: {instanceID: 14330}
+    - Class: 114
+      Script: {instanceID: 14814}
+    - Class: 114
+      Script: {instanceID: 14976}
+    - Class: 114
+      Script: {instanceID: 15478}
+    - Class: 114
+      Script: {instanceID: 15870}
+    - Class: 114
+      Script: {instanceID: 15926}
+    - Class: 114
+      Script: {instanceID: 15972}
+    - Class: 114
+      Script: {instanceID: 15998}
+    - Class: 114
+      Script: {instanceID: 16050}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    - Class: 241
+      Script: {instanceID: 0}
+    - Class: 243
+      Script: {instanceID: 0}
+    - Class: 245
+      Script: {instanceID: 0}
+    Assets/Scenes/video.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
+    - Class: 81
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -291,8 +390,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12246}
     - Class: 114
-      Script: {instanceID: 12456}
-    - Class: 114
       Script: {instanceID: 12550}
     - Class: 114
       Script: {instanceID: 12602}
@@ -313,13 +410,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13494}
     - Class: 114
-      Script: {instanceID: 13834}
-    - Class: 114
       Script: {instanceID: 13852}
     - Class: 114
       Script: {instanceID: 13880}
-    - Class: 114
-      Script: {instanceID: 14048}
     - Class: 114
       Script: {instanceID: 14058}
     - Class: 114
@@ -343,41 +436,35 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 14950}
     - Class: 114
-      Script: {instanceID: 14974}
+      Script: {instanceID: 14976}
     - Class: 114
-      Script: {instanceID: 15038}
+      Script: {instanceID: 15040}
     - Class: 114
-      Script: {instanceID: 15370}
+      Script: {instanceID: 15372}
     - Class: 114
-      Script: {instanceID: 15424}
+      Script: {instanceID: 15426}
     - Class: 114
-      Script: {instanceID: 15476}
+      Script: {instanceID: 15592}
     - Class: 114
-      Script: {instanceID: 15590}
+      Script: {instanceID: 15664}
     - Class: 114
-      Script: {instanceID: 15662}
-    - Class: 114
-      Script: {instanceID: 15718}
-    - Class: 114
-      Script: {instanceID: 15868}
-    - Class: 114
-      Script: {instanceID: 15924}
-    - Class: 114
-      Script: {instanceID: 15930}
+      Script: {instanceID: 15720}
     - Class: 114
       Script: {instanceID: 15932}
     - Class: 114
-      Script: {instanceID: 15970}
+      Script: {instanceID: 15934}
     - Class: 114
-      Script: {instanceID: 15996}
+      Script: {instanceID: 15972}
     - Class: 114
-      Script: {instanceID: 16000}
+      Script: {instanceID: 15998}
     - Class: 114
-      Script: {instanceID: 16048}
+      Script: {instanceID: 16002}
     - Class: 114
-      Script: {instanceID: 16154}
+      Script: {instanceID: 16050}
     - Class: 114
-      Script: {instanceID: 16160}
+      Script: {instanceID: 16156}
+    - Class: 114
+      Script: {instanceID: 16162}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -394,11 +481,9 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 224
       Script: {instanceID: 0}
-    - Class: 241
+    - Class: 328
       Script: {instanceID: 0}
-    - Class: 243
-      Script: {instanceID: 0}
-    - Class: 245
+    - Class: 329
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -1363,6 +1448,12 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerVector2
   - hash:
       serializedVersion: 2
+      Hash: 62d3206629089430eb4f3ff5ee0bfc43
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Teleporter
+  - hash:
+      serializedVersion: 2
       Hash: b9ab660c6b5b010c3670036f8bf54d82
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -1507,7 +1598,7 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerUIntField
   - hash:
       serializedVersion: 2
-      Hash: 30a49979204b364ed0548f2d45f9221e
+      Hash: 5af8d0c36d26d655d10412fc71028f23
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PauzeGame
@@ -1831,6 +1922,7 @@ ScriptsOnlyBuild:
     className: VFXUISliderBinder
   platform: 19
   scenePathNames:
+  - Assets/Scenes/video.unity
   - Assets/Scenes/StartMenu.unity
   - Assets/Scenes/Level1.unity
-  playerPath: C:/Users/zakae/OneDrive/Bureaublad/ExpandingSpace/ExpandingSpaceGame.exe
+  playerPath: C:/Users/Emile/OneDrive/Bureaublad/tt/ExpandingSpaceGame.exe

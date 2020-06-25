@@ -39,12 +39,16 @@ public class Bomb : MonoBehaviour
             //do explode damage
             for (int i = 0; i < list.Count; i++)
             {
-                if (list[i] == null) return;
-                if (list[i].gameObject == null) return;
-                if (list[i].gameObject.tag.Equals("DestoyableWithBomb"))
+                if (list[i] != null)
                 {
-                    //destory
-                    Destroy(list[i]);
+                    if (list[i].gameObject != null)
+                    {
+                        if (list[i].gameObject.tag.Equals("DestoyableWithBomb"))
+                        {
+                            //destory
+                            Destroy(list[i]);
+                        }
+                    }
                 }
             }
         }
